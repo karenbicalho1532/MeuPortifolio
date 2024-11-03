@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script defer src = "main.js"></script>
+    <title>Document</title>
+    <style>
+        .projects-container {
+            display: flex; 
+            justify-content: flex-start; 
+        }
+        
+        .project {
+            margin: 0 10px; 
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 300px; 
+        }
+        
+        .carousel-track-container {
+            display: flex;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+        }
+        
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .carousel-button.prev {
+            left: 10px;
+        }
+        
+        .carousel-button.next {
+            right: 10px;
+        }
+          /* css das disciplinas cursadas */
+
+          table{ width: 100%; border-collapse: collapse;}
+          table, th, td { border: 1.2px solid #ddd; ; text-align: left;}
+          th { background-color: #f2f2f2; }
+         .action-buttons { display: flex; gap: 10px; }
+          
+    </style>
+</head>
+<body>
+    <main>
+        <aside>
+         <ul class="Links">
+            <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+            <p>Home</p>
+            </li>
+
+            <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
+            <p>Sobre Mim</p>
+            </li>
+
+            <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+            <p>UCS cursadas</p>
+            </li>
+
+            <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+            <p>Certificações</p>
+            </li>
+
+            <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+            <p>Contato</p>
+            </li>
+         </ul>
+        </aside>
+
+<div class="swiper mySwiper">
+    <div class="SlideConteiner swiper-wrapper">
+        <div class="swiper-slide home-slide">
+            <div class="HomeContent">
+                <h2>Bem-vindo ao meu Portfólio!</h2>
+                <p class="heroline">Olá! É um prazer recebê-lo(a) aqui. Meu nome é Karen de Jesus Bicalho sou graduanda de sistema de informação no centro universitário UNA e atualmente sou estagiária de segurança cibernética no Banco Mercantil. Aqui você encontra um pouco sobre mim, meus conhecimentos, projetos em que estou envolvida e minhas certificações.</p>
+                <div class="buttonGroup">
+                    <a href="https://br.linkedin.com/in/karenbicallho"><button>Acesse meu Linkedin</button></a>                    
+                </div>
+            </div>
+
+            <div class="SideImg">
+                <div class="top-right-corner">
+                   
+                </div>
+                <img src="img/minhagoto.jpg" style=" width: 350px; object-fit: cover; border: 2px solid #ec295a;" alt="">
+                <div class="bottom-left-corner">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="about-us">
+                <h1 class="heading">Sobre Mim</h1>
+                <p class="aboutme-deatils">
+                    Sou Karen Bicalho, <span class="proffesions">estagiária em segurança cibernética</span> com foco em <span class="proffesions">Gerenciamento de identidade e acessos(IAM)</span> , estou sempre motivada a aprofundar meus conhecimentos na área. Atualmente, integro o projeto de extensão <span class="proffesions">"Women Info Security"</span> do Ânima Hub, iniciado em fevereiro de 2024, onde desenvolvo habilidades voltadas para a segurança da informação. No meu dia a dia, atuo no atendimento de demandas para tratamento de erros em sistemas, gestão de usuários e acessos, além de realizar análises de criação e permissões de usuários em diversos serviços. Minha rotina inclui também atividades de liberação de firewall, levantamento de dados para auditorias, geração de relatórios e desenvolvimento de procedimentos internos. Participo ativamente de projetos de atualização de APIs e consoles, buscando sempre aprimorar processos por meio da automação e otimização das tarefas.
+                </p>
+
+                <div class="about-me-divison">
+                    <div class = "about-me-table">
+                        <li><span>Nome Completo:</span> Karen de Jesus Bicalho</li>
+                        <li><span>RA:</span>323112547</li>
+                        <li><span>Curso:</span>Sistemas de Informação</li>
+                        <li><span>Período:</span>5°</li>
+                        <li><span>Bairro:</span>Renascença</li>
+                        <li><span>Rua:</span>Indianopolis</li>
+                        <li><span>N°</span>1059</li>
+                        <li><span>E-mail:</span>karenjbicalho@gmail.com</li>
+                       </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="swiper-slide UCs">
+                <div class="projects-container">
+                    <div class="project">
+                        <div >
+                            <div class="ucs" style="margin: 20%;"></div>
+                        <h1 class="heading">Ucas cursadas</h1>
+                        <table id="ucTable" style="margin-left: 10%; margin-bottom: 5%;">
+                            <thead>
+                                <tr>
+                                    <th>UC</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <!-- Todas as linhas adicionas no input de UCS serão preenchidas por esse campo aqui da tabela-->
+
+                                <tr>
+                                    <td>Ambientes computacionais e conectividade</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Direito Digital</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Gestão e qualidade de software</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Modelagem de software</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Modelos, métodos e técnicas da engenharia de software</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Programação de soluções computacionais</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Projetos e processos de TI</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Sistemas computacionais e segurança</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Vida & Carreira</td>
+                                    <td>Cursada</td>
+                                    <td class="actions">
+                                        <span class="arrow-btn" onclick="moveRow(this, -1)">⬆️</span>
+                                        <span class="arrow-btn" onclick="moveRow(this, 1)">⬇️</span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <button  style="cursor: pointer;background-color: #ec295a; color: white; border-radius: 5px;font-size: 1rem;font-weight: 50; cursor: pointer; padding: 4px 8px; margin-left: 10%;"    onclick="addNewUC()">Adicionar Nova UC</button>
+                </div></div>
+                </div>
+        </div>
+
+        <div class="swiper-slide gallery">
+            <h1 class="heading">Minhas Certificações</h1>
+            <div class="projects-container">
+                <div class="project">
+                    <div class="carousel-container">
+                        <button class="carousel-button prev">❮</button>
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <li class="carousel-slide"><img src="img/certificado1.jpeg" alt="Imagem 1"></li>
+                                <li class="carousel-slide"><img src="img/certificado2.jpeg" alt="Imagem 2"></li>
+                                <li class="carousel-slide"><img src="img/certificado3.jpeg" alt="Imagem 3"></li>
+                                <li class="carousel-slide"><img src="img/certificado4.jpeg" alt="Imagem 4"></li>
+                                <li class="carousel-slide"><img src="img/certificado5.jpeg" alt="Imagem 5"></li>
+                                <li class="carousel-slide"><img src="img/certificado6.jpeg" alt="Imagem 6"></li>
+                            </ul>
+                        </div>
+                        <button class="carousel-button next">❯</button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="carousel-container">
+                        <button class="carousel-button prev">❮</button>
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <li class="carousel-slide"><img src="img/certificado7.jpeg" alt="Imagem 7"></li>
+                                <li class="carousel-slide"><img src="img/certificado8.jpeg" alt="Imagem 8"></li>
+                                <li class="carousel-slide"><img src="img/certificado9.jpeg" alt="Imagem 9"></li>
+                                <li class="carousel-slide"><img src="img/certificado10.png" alt="Imagem 10"></li>
+                                <li class="carousel-slide"><img src="img/certificado11.png" alt="Imagem 11"></li>
+                            </ul>
+                        </div>
+                        <button class="carousel-button next">❯</button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="carousel-container">
+                        <button class="carousel-button prev">❮</button>
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <li class="carousel-slide"><img src="img/certificado16.jpeg" alt="Imagem 16"></li>
+                                <li class="carousel-slide"><img src="img/certificado13.jpeg" alt="Imagem 13"></li>
+                                <li class="carousel-slide"><img src="img/certificado14.jpeg" alt="Imagem 14"></li>
+                                <li class="carousel-slide"><img src="img/certificado15.jpeg" alt="Imagem 15"></li>
+                                <li class="carousel-slide"><img src="img/certificado12.jpeg" alt="Imagem 12"></li>
+                            </ul>
+                        </div>
+                        <button class="carousel-button next">❯</button>
+                    </div>
+                </div>
+            </div>
+                        
+        </div>
+
+    <div class="swiper-slide contactMe">
+        <h1 class="heading">Meu contato</h1>
+
+       <div class="contactinfo"><i class="fa-solid fa-phone"></i>
+        <h3>Celular</h3>
+        <p>(31) 9 9527-8652</p>
+       </div>
+
+       <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
+        <h3>Localização</h3>
+        <p>Belo Horizonte</p>
+       </div>
+
+       <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
+        <h3>Email</h3>
+        <p>karenjbicalho@gmail.com</p>
+       </div>
+
+    <form  id="contatform" onsubmit="return validarForm()">
+
+        <h2>Envie uma mensagem: <div class="SocialLinks">
+        </div>
+        </h2>
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="email" placeholder="exemplo@dominio.com" onblur="validarEmail()">
+        <input tupe ="number" id="cpf" placeholder="000.000.000-00" onblur="validarCPF()">
+        <textarea rows="10" placeholder="Escreva uma mensagem"></textarea>
+        <button class="primary">Enviar</button>
+
+    </form>
+    </div>
+   </div>
+
+</main>
+</body>
+</html>
